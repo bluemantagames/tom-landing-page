@@ -81,7 +81,7 @@
                     <div class="col-md-6">
                         <div class="hero-caption"><!-- Main Tagline -->
                             <img src="images/headline.png" class="img-fluid headline" alt="source code">
-                            <a href="#" class="button">BUY NOW</a>
+                            <a href="#" class="button w-auto js-to-newsletter">KEEP ME POSTED</a>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -133,7 +133,7 @@
     </section>
     
     <section id="extras" class="full-width">
-        <div class="container">
+        <div class="container" id="newsletter">
             <div class="row">
                 <div class="col-lg-6 col-md-12">
                     <img src="images/headline.png" class="img-fluid headline" alt="source code">
@@ -198,5 +198,13 @@
     <script src="js/lightbox.min.js"></script>
     <script src="js/validator.min.js"></script>
     <script src="js/arsnl.js"></script>
+
+    <script>
+        $(".js-to-newsletter").click(function() {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#newsletter").offset().top
+            }, 400);
+        });
+    </script>
 </body>
 </html>
