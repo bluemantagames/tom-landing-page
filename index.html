@@ -49,6 +49,31 @@
     <link href="css/lightbox.min.css" rel="stylesheet">
     <!-- Main Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .lineup {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            height: calc(100% - 2px);
+            width: 100%;
+        }
+
+        .lineup.lineup--blue {
+            background-image: url('images/blueLineup.png');
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            background-position: center right;
+        }
+
+        .lineup.lineup--red {
+            background-image: url('images/redLineup.png');
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            background-position: center left;
+        }
+    </style>
 </head>
 <body>
     <!-- Cookies Notification -->
@@ -74,17 +99,14 @@
     </header><!-- Header End -->
 
     <!-- /// HERO SECTION /// -->
-    <section id="hero-section">
+    <section id="hero-section position-relative overflow-hidden">
+        <div class="lineup lineup--red"></div>
+        <div class="lineup lineup--blue"></div>
+
         <div class="row hero-unit">
             <div class="container">
                 <div class="row text-center">
-                    <div class="col-md-6">
-                        <div class="hero-caption"><!-- Main Tagline -->
-                            <img src="images/headline.png" class="img-fluid headline" alt="source code">
-                            <a href="#" class="button w-auto js-to-newsletter">KEEP ME POSTED</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="video-box">
                             <a class="js-video-button" data-video-id='obWStDLSDUc' data-channel="youtube">
                                 <img class="play-button" src="images/play-button-white.svg" alt="play-button">
