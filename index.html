@@ -51,33 +51,48 @@
     <link href="css/style.css" rel="stylesheet">
 
     <style>
-        .lineup {
+        .js-parallax {
             position: absolute;
             top: 0;
             left: 0;
 
-            height: calc(100% - 2px);
+            height: 100%;
             width: 100%;
+        }
+
+        .js-layer {
+            position: absolute !important;
+            height: 100%;
+            width: 100%;
+        }
+
+        .lineup {
+            height: 110%;
+            width: 110%;
 
             background-repeat: no-repeat;
             background-size: auto 100%;
         }
 
         .lineup.lineup--blue {
+            transform: translateX(-5%) translateY(-5%);
+
             background-image: url('images/blueLineup.png');
             background-position: center right;
         }
 
         .lineup.lineup--red {
+            transform: translateX(-5%) translateY(-5%);
+
             background-image: url('images/redLineup.png');
             background-position: center left;
         }
 
         .lineup.lineup.lineup--cleric {
+            transform: translateX(-5%) translateY(-5%);
+
             background-image: url('images/cleric.png');
             background-position: center right;
-
-            height: 100%;
         }
 
         .bg-red {
@@ -128,11 +143,8 @@
     </header><!-- Header End -->
 
     <!-- /// HERO SECTION /// -->
-    <section id="hero-section position-relative overflow-hidden">
-        <div class="lineup lineup--red"></div>
-        <div class="lineup lineup--blue"></div>
-
-        <div class="row hero-unit">
+    <section id="hero-section">
+        <div class="row hero-unit position-relative overflow-hidden">
             <div class="container">
                 <div class="row text-center">
                     <div class="col-md-12">
@@ -145,12 +157,21 @@
                     </div>
                 </div>
             </div>
+
+            <div class="js-parallax">
+                <div class="js-layer" data-depth="0.15">
+                    <div class="lineup lineup--red"></div> 
+                </div>
+
+                <div class="js-layer" data-depth="0.1">
+                    <div class="lineup lineup--blue"></div>
+                </div>
+            </div>
         </div>
     </section><!-- Hero Section End -->
     
     <!-- /// ABOUT SECTION /// -->
     <section class="full-width bg-red position-relative overflow-hidden">
-        <div class="lineup lineup--cleric"></div>
         <a id="about"></a><!-- Nav anchor -->
         <div class="container">
             <div class="row">
@@ -159,6 +180,12 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi eros, scelerisque vitae diam eu, malesuada pellentesque sapien. Aenean faucibus nisl lacus, non finibus mauris pulvinar et. Sed ultrices laoreet est, id gravida lorem tincidunt at.</p>
                     <p>Cras in mauris augue. Nulla eu tellus arcu. Duis aliquet sit amet tortor eget vestibulum. Pellentesque nunc libero, scelerisque vitae tristique id, maximus sed turpis.</p>    
                 </div>
+            </div>
+        </div>
+
+        <div class="js-parallax">
+            <div class="js-layer" data-depth="0.18">
+                <div class="lineup lineup--cleric"></div> 
             </div>
         </div>
     </section>
@@ -250,13 +277,15 @@
     <script src="js/lightbox.min.js"></script>
     <script src="js/validator.min.js"></script>
     <script src="js/arsnl.js"></script>
+    <script src="js/parallax.min.js"></script>
 
     <script>
-        $(".js-to-newsletter").click(function() {
-            $([document.documentElement, document.body]).animate({
-                scrollTop: $("#newsletter").offset().top
-            }, 400);
-        });
+        // Parallax effect
+        var scenes = document.querySelectorAll('.js-parallax');
+
+        for (i = 0; i < scenes.length; ++i) {
+            new Parallax(scenes[i], { selector: '.js-layer', invertX: (i % 2) === 1, invertY: (i % 2) === 1 });
+        }
     </script>
 </body>
 </html>
