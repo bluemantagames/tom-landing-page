@@ -34,8 +34,8 @@ a (active):	#FFF;
 [Colors]
 
 Primary Color: #222;
-Accent Color: #d71414;
-Button Color: #bc1a1a;
+Accent Color: #a04446;
+Button Color: #a04446;
 -------------------------------------------------------------------*/
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800'); /* Montserrat font */
@@ -43,7 +43,7 @@ Button Color: #bc1a1a;
 /* --------------------------- /////////// I. GENERAL /////////// --------------------------- */
 /* -Color- */
 .colored {
-    color: #d71414;
+    color: #a04446;
 }
 /* -Link Styling- */
 a {
@@ -56,7 +56,7 @@ a:visited {
     text-decoration: none;
 }
 a:hover {
-    color: #d71414;
+    color: #a04446;
 	text-decoration: none;
 }
 a:active {
@@ -123,7 +123,7 @@ p {
 }
 .short-hr-left::after {
     border-top: 2px solid;
-    border-color: #d71414;
+    border-color: #a04446;
     content: "";
     display: block;
     height: 1px;
@@ -132,7 +132,7 @@ p {
 }
 .short-hr-center::after {
     border-top: 2px solid;
-    border-color: #d71414;
+    border-color: #a04446;
     content: "";
     display: block;
     height: 1px;
@@ -141,7 +141,7 @@ p {
 }
 .short-hr-right::after {
     border-top: 2px solid;
-    border-color: #d71414;
+    border-color: #a04446;
     content: "";
     display: block;
     height: 1px;
@@ -181,7 +181,7 @@ li {
 hr {
     width: 95%;
     height: 1px;
-    background: #d71414;
+    background: #a04446;
     margin: 20px auto 25px auto;
 }
 /* -General Button Styles */
@@ -212,7 +212,7 @@ button {
 .button:hover {
     text-decoration: none !important;
     color: #FFF !important;
-    background: #bc1a1a;
+    background: #a04446;
 }
 .button:focus {
     color: #222;
@@ -227,7 +227,7 @@ button {
     width: 100vw;
     position: fixed;
     bottom: -60px;
-    border-top: 1px solid #d71414;
+    border-top: 1px solid #a04446;
     z-index: 10;
     transition: 0.4s;
 }
@@ -261,7 +261,7 @@ button {
     background: none;
 }
 .cookies-bar .button:hover {
-    color: #d71414 !important;
+    color: #a04446 !important;
 }
 /* - Age verification modal - */
 .ac-overlay {
@@ -350,7 +350,7 @@ button {
     color: #FFF;
 }
 .navbar-dark .navbar-nav .nav-link:hover {
-    color: #d71414;
+    color: #a04446;
 }
 .fixed-top {
     z-index: 90;
@@ -377,7 +377,7 @@ button {
 	font-size: 0.875rem;
 }
 .navbar-collapse .dropdown-item:hover .item-text {
-	color: #d71414;
+	color: #a04446;
 }
 .navbar-collapse .dropdown-items-divide-hr {
 	width: 100%;
@@ -686,10 +686,10 @@ button {
     background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
 }
 .modal-header {
-    border-bottom: 1px solid #d71414;
+    border-bottom: 1px solid #a04446;
 }
 .modal-footer {
-    border-top: 1px solid #d71414;
+    border-top: 1px solid #a04446;
 }
 .modal-body > ul > li > p {
     padding: 0px 5px;
@@ -714,7 +714,7 @@ button {
     opacity: 1;
 }
 .close:hover {
-    color: #d71414;
+    color: #a04446;
 }
 .button.modal-btn {
     margin: 0;
@@ -793,7 +793,7 @@ input {
     vertical-align: top;
 }
 #newsletter-box .button:hover {
-    background: #bc1a1a;  
+    background: #a04446;  
 }
 .text-danger {
     font-family: Montserrat, sans-serif;
@@ -822,7 +822,7 @@ input {
     background: #FFF;
 }
 #extras .social-links li:hover a {
-    color: #d71414;
+    color: #a04446;
 }
 /* -RESPONSIVE STYLES- */
 @media (max-width : 991px) {
@@ -841,7 +841,7 @@ input {
     height: auto;
     color: #AAA;
     background: url(../images/bg.png) repeat;
-    border-top: 1px solid #d71414;
+    border-top: 1px solid #a04446;
     font-size: 14px;
     line-height: 20px;
 }
@@ -859,7 +859,7 @@ input {
     color: #AAA;
 }
 #footer ul li a:hover {
-    color: #d71414;
+    color: #a04446;
 }
 .brands {
     text-align: center;
@@ -881,12 +881,12 @@ input {
     font-size: 0.875rem;
 }
 .extra-page a {
-    color: #d71414;
+    color: #a04446;
 }
 .extra-page a:hover {
-    color: #d71414;
+    color: #a04446;
     text-decoration: underline;
-    text-decoration-color: #d71414;
+    text-decoration-color: #a04446;
 }
 .extra-page .hero-unit {
     min-height: 400px;
@@ -925,7 +925,7 @@ input {
 }
 #footer-extra {
     padding-top: 25px;
-    border-top: 1px solid #d71414;
+    border-top: 1px solid #a04446;
     background: url(../images/bg.png) repeat; 
 }
 #footer-extra .social-links li {
@@ -948,7 +948,7 @@ input {
     background: #FFF;
 }
 #footer-extra .social-links li:hover a {
-    color: #d71414;
+    color: #a04446;
 }
 .form-control-input {
     width: 100%;
