@@ -51,6 +51,11 @@
     <link href="css/style.css" rel="stylesheet">
 
     <style>
+        .parallax-front {
+            position: relative;
+            z-index: 10;
+        }
+
         .js-parallax {
             position: absolute;
             top: 0;
@@ -58,6 +63,8 @@
 
             height: 100%;
             width: 100%;
+
+            z-index: 0;
         }
 
         .js-layer {
@@ -145,7 +152,7 @@
     <!-- /// HERO SECTION /// -->
     <section id="hero-section">
         <div class="row hero-unit position-relative overflow-hidden">
-            <div class="container">
+            <div class="container parallax-front">
                 <div class="row text-center">
                     <div class="col-md-12">
                         <div class="video-box">
@@ -173,7 +180,8 @@
     <!-- /// ABOUT SECTION /// -->
     <section class="full-width bg-red position-relative overflow-hidden">
         <a id="about"></a><!-- Nav anchor -->
-        <div class="container">
+
+        <div class="container parallax-front">
             <div class="row">
                 <div class="col-xl-6 col-md-12">
                     <h1 class="short-hr-left">THE GAME</h1>
