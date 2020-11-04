@@ -766,9 +766,6 @@ button {
     }
 }
 /* --------------------------- /////////// IX. EXTRAS /////////// --------------------------- */
-#extras {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/bg.jpg);
-}
 #extras .headline {
     margin-top: 20vh;
     width: 70%;

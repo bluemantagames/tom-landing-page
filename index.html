@@ -58,20 +58,49 @@
 
             height: calc(100% - 2px);
             width: 100%;
+
+            background-repeat: no-repeat;
+            background-size: auto 100%;
         }
 
         .lineup.lineup--blue {
             background-image: url('images/blueLineup.png');
-            background-repeat: no-repeat;
-            background-size: auto 100%;
             background-position: center right;
         }
 
         .lineup.lineup--red {
             background-image: url('images/redLineup.png');
-            background-repeat: no-repeat;
-            background-size: auto 100%;
             background-position: center left;
+        }
+
+        .lineup.lineup.lineup--cleric {
+            background-image: url('images/cleric.png');
+            background-position: center right;
+
+            height: 100%;
+        }
+
+        .bg-red {
+            background: url('images/bgRed.jpeg');
+            background-size: cover;
+        }
+
+        .bg-blue {
+            background: url('images/bgBlue.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #features-section .feature-card:nth-child(1) {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/feature1.jpg')
+        }
+
+        #features-section .feature-card:nth-child(2) {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/feature2.jpg');
+        }
+
+        #features-section .feature-card:nth-child(3) {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/feature3.jpg');
         }
     </style>
 </head>
@@ -120,7 +149,8 @@
     </section><!-- Hero Section End -->
     
     <!-- /// ABOUT SECTION /// -->
-    <section id="about-section" class="full-width">
+    <section class="full-width bg-red position-relative overflow-hidden">
+        <div class="lineup lineup--cleric"></div>
         <a id="about"></a><!-- Nav anchor -->
         <div class="container">
             <div class="row">
@@ -154,7 +184,7 @@
         </div>
     </section>
     
-    <section id="extras" class="full-width">
+    <section id="extras" class="full-width bg-blue">
         <div class="container" id="newsletter">
             <div class="row">
                 <div class="col-lg-6 col-md-12">
@@ -163,7 +193,7 @@
                 <div class="col-lg-6 col-md-12">
                     <div class="row tiny-margin">
                         <div class="col-md-12">
-                            <h1>STAY IN TOUTCH</h1>
+                            <h1>STAY IN TOUCH</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam venenatis tortor ut facilisis semper. Pellentesque dignissim sem in tincidunt aliquet.</p>
                         </div>
                     </div>
