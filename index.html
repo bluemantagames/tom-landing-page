@@ -124,6 +124,23 @@
         #features-section .feature-card:nth-child(3) {
             background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/feature3.jpg');
         }
+
+        .custom-navbar .container {
+            height: 6em;
+        }
+
+        .custom-navbar .headline {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+            width: 12.3em;
+        }
+        
+        #scale-image {
+            transform-origin: top center;
+        }
     </style>
 </head>
 <body>
@@ -138,10 +155,12 @@
     </div>
     <!-- //// HEADER //// -->
     <header id="main-header">
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
-            <div class="container">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark custom-navbar">
+            <div class="container position-relative">
                 <!-- Site Logo -->
-                <a id="main-logo" class="navbar-brand ml-auto mr-auto" href="#">Towers of Minduir</a>
+                <a id="main-logo" class="navbar-brand ml-auto mr-auto text-center headline" href="#">
+                    <img src="images/headline.png" class="img-fluid" alt="Towers of Minduir logo" id="scale-image">
+                </a>
                 <!-- IMG Logo 
                 <img src="images/logo.png" id="main-logo" class="navbar-brand" alt="logo">
                 -->
@@ -223,7 +242,7 @@
         <div class="container" id="newsletter">
             <div class="row">
                 <div class="col-lg-6 col-md-12">
-                    <img src="images/headline.png" class="img-fluid headline" alt="source code">
+                    <img src="images/headline.png" class="img-fluid w-75" alt="Towers of Minduir logo">
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <div class="row tiny-margin">
@@ -294,6 +313,23 @@
         for (i = 0; i < scenes.length; ++i) {
             new Parallax(scenes[i], { selector: '.js-layer', invertX: (i % 2) === 1, invertY: (i % 2) === 1 });
         }
+
+        // Logo scroll effect
+        var scaleImage = $('#scale-image')
+        var trackContainer = $('#hero-section')
+        var endFromTop = $(trackContainer).offset().top + $(trackContainer).innerHeight()
+        var scaleTo = 0.27
+        var scaleFrom = 1
+
+        $(window).scroll(() => {
+            var currentPosition = $(this).scrollTop()
+            var currentScale = (currentPosition - 0) / (endFromTop - 0) * (scaleTo - scaleFrom) + scaleFrom
+            var sanitizedCurrentScale = currentScale <= scaleTo ? scaleTo : currentScale >= scaleFrom ? scaleFrom : currentScale
+
+            $(scaleImage).css('transform', `scale3d(${sanitizedCurrentScale}, ${sanitizedCurrentScale}, ${sanitizedCurrentScale})`)
+        })
+
+        $(window).scroll()
     </script>
 </body>
 </html>
