@@ -141,6 +141,30 @@
         #scale-image {
             transform-origin: top center;
         }
+
+        .feature-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .features h2.short-hr-center {
+            margin-top: 0px;
+        }
+
+        .features h2.short-hr-center::after {
+            width: 50px;
+        }
+
+        .features p {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .features .feature-card.card-active h2.short-hr-center::after {
+            width: 100px;
+        }
     </style>
 </head>
 <body>
