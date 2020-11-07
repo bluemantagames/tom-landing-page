@@ -318,12 +318,13 @@
         var scaleImage = $('#scale-image')
         var trackContainer = $('#hero-section')
         var endFromTop = $(trackContainer).offset().top + $(trackContainer).innerHeight()
+        var startFromTop = 0
         var scaleTo = 0.27
         var scaleFrom = 1
 
         $(window).scroll(() => {
             var currentPosition = $(this).scrollTop()
-            var currentScale = (currentPosition - 0) / (endFromTop - 0) * (scaleTo - scaleFrom) + scaleFrom
+            var currentScale = (currentPosition - startFromTop) / (endFromTop - startFromTop) * (scaleTo - scaleFrom) + scaleFrom
             var sanitizedCurrentScale = currentScale <= scaleTo ? scaleTo : currentScale >= scaleFrom ? scaleFrom : currentScale
 
             $(scaleImage).css('transform', `scale3d(${sanitizedCurrentScale}, ${sanitizedCurrentScale}, ${sanitizedCurrentScale})`)
