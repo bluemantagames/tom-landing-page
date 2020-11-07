@@ -125,11 +125,22 @@
             background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/feature3.jpg');
         }
 
+        .custom-navbar {
+            font-size: 1.5em;
+            background-color: transparent;
+        }
+
+        .custom-navbar.scrolled {
+            background-color: rgba(0,0,0,0.8);
+        }
+
         .custom-navbar .container {
-            height: 6em;
+            height: 3.6em;
         }
 
         .custom-navbar .headline {
+            font-size: inherit !important;
+
             position: absolute;
             top: 0;
             left: 50%;
@@ -165,6 +176,37 @@
         .features .feature-card.card-active h2.short-hr-center::after {
             width: 100px;
         }
+
+        .video-box {
+            margin: 0;
+            height: auto;
+        }
+
+        @media only screen and (max-width: 107em) {
+            .custom-navbar { font-size: 1.2em; }
+        }
+
+        @media only screen and (max-width: 78.5em) {
+            .lineup.lineup--blue {
+                transform: translateX(5%) translateY(-5%);
+            }
+
+            .lineup.lineup--red {
+                transform: translateX(-15%) translateY(-5%);
+            }
+
+            .lineup.lineup.lineup--cleric {
+                transform: translateX(10%) translateY(-5%);
+            }
+        }
+
+        @media only screen and (max-width: 53.5em) {
+            .lineup.lineup--blue,
+            .lineup.lineup--red,
+            .lineup.lineup.lineup--cleric {
+                display: none
+            }
+        }
     </style>
 </head>
 <body>
@@ -179,7 +221,7 @@
     </div>
     <!-- //// HEADER //// -->
     <header id="main-header">
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark custom-navbar">
+        <nav class="navbar fixed-top navbar-dark custom-navbar">
             <div class="container position-relative">
                 <!-- Site Logo -->
                 <a id="main-logo" class="navbar-brand ml-auto mr-auto text-center headline" href="#">
@@ -196,8 +238,8 @@
     <section id="hero-section">
         <div class="row hero-unit position-relative overflow-hidden">
             <div class="container parallax-front">
-                <div class="row text-center">
-                    <div class="col-md-12">
+                <div class="row text-center h-100">
+                    <div class="col-md-12 d-flex flex-column justify-content-center align-items-center">
                         <div class="video-box">
                             <a class="js-video-button" data-video-id='obWStDLSDUc' data-channel="youtube">
                                 <img class="play-button" src="images/play-button-white.svg" alt="play-button">
@@ -268,7 +310,7 @@
                 <div class="col-lg-6 col-md-12">
                     <img src="images/headline.png" class="img-fluid w-75" alt="Towers of Minduir logo">
                 </div>
-                <div class="col-lg-6 col-md-12">
+                <div class="col-lg-6 col-md-12 mt-5 mt-lg-0">
                     <div class="row tiny-margin">
                         <div class="col-md-12">
                             <h1>STAY IN TOUCH</h1>
@@ -279,8 +321,8 @@
                         <div class="col-md-12">
                             <h3>NEWSLETTER</h3>    
                             <form id="newsletter" data-toggle="validator">
-                                <input type="email" id="emailsign" placeholder="Your Email Address"> <!-- Email Field -->
-                                <button type="submit" id="form-signup" class="button">SUBSCRIBE</button>
+                                <input type="email" id="emailsign" placeholder="Your Email Address" class="mt-1"> <!-- Email Field -->
+                                <button type="submit" id="form-signup" class="button mt-1">SUBSCRIBE</button>
                                 <div id="msgSignup" class="h3 text-center hidden"></div>
                             </form>
                         </div>
