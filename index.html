@@ -98,7 +98,7 @@
         }
 
         .lineup.lineup.lineup--cleric {
-            transform: translateX(-5%) translateY(-5%);
+            transform: translateX(10%) translateY(-5%);
 
             background-image: url('images/cleric.png');
             background-position: center right;
@@ -265,6 +265,24 @@
                 display: none
             }
         }
+
+        @media only screen and (max-width: 53.5em) {
+            .lineup.lineup--blue,
+            .lineup.lineup--red,
+            .lineup.lineup.lineup--cleric {
+                display: none
+            }
+        }
+
+        @media only screen and (min-width: 180em) {
+            .full-width {
+                padding: 17vh 0;
+            }
+
+            .lineup.lineup.lineup--cleric {
+                transform: translateX(20%) translateY(-5%);
+            }
+        }
     </style>
 
     <link href="https://cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
@@ -335,27 +353,30 @@
     </section><!-- Hero Section End -->
     
     <!-- /// ABOUT SECTION /// -->
-    <section class="full-width bg-red position-relative overflow-hidden">
+    <section class="bg-red overflow-hidden capped-section">
         <a id="about"></a><!-- Nav anchor -->
 
-        <div class="container parallax-front">
-            <div class="row">
-                <div class="col-xl-6 col-md-12">
-                    <h1 class="short-hr-left">THE GAME</h1>
-                    <p>Towers of Minduir is a free real-time strategy game. The game consists of building your deck and challenging other players in multiplayer online battles. Deploy your troops, target enemy towers and cast spells to defeat enemies!</p>
+        <div class="container full-width position-relative">
+            <div class="parallax-front">
+                <div class="row">
+                    <div class="col-xl-6 col-md-12">
+                        <h1 class="short-hr-left">THE GAME</h1>
+                        <p>Towers of Minduir is a free real-time strategy game. The game consists of building your deck and challenging other players in multiplayer online battles. Deploy your troops, target enemy towers and cast spells to defeat enemies!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="js-parallax">
+                <div class="js-layer" data-depth="0.18">
+                    <div class="lineup lineup--cleric"></div> 
                 </div>
             </div>
         </div>
-
-        <div class="js-parallax">
-            <div class="js-layer" data-depth="0.18">
-                <div class="lineup lineup--cleric"></div> 
-            </div>
-        </div>
+        
     </section>
     
     <!-- /// FEATURES SECTION /// -->
-    <section id="features-section">
+    <section id="features-section" class="capped-section">
         <div class="container-fluid">
             <a id="features"></a><!-- Nav anchor -->
             <div class="row features text-center">
@@ -375,7 +396,7 @@
         </div>
     </section>
     
-    <section id="extras" class="full-width bg-blue">
+    <section id="extras" class="full-width bg-blue capped-section">
         <div class="container" id="newsletter">
             <div class="row d-flex flex-direction-row align-items-center">
                 <div class="col-lg-6 col-md-12">
