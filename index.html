@@ -252,6 +252,10 @@
             font-weight: 600;
         }
 
+        .fixed-section-border {
+            border-bottom: 2px solid #000;
+        }
+
         @media only screen and (max-width: 107em) {
             .custom-navbar { font-size: 1.2em; }
         }
@@ -288,7 +292,8 @@
 
         @media only screen and (min-width: 180em) {
             .full-width {
-                padding: 17vh 0;
+                padding-top: 17vh;
+                padding-bottom: 17vh;
             }
 
             .lineup.lineup.lineup--cleric {
@@ -359,22 +364,22 @@
     </section><!-- Hero Section End -->
     
     <!-- /// ABOUT SECTION /// -->
-    <section class="bg-red overflow-hidden capped-section">
+    <section class="bg-red overflow-hidden capped-section fixed-section-border">
         <a id="about"></a><!-- Nav anchor -->
 
-        <div class="container full-width position-relative">
-            <div class="parallax-front">
+        <div class="container">
+            <div class="parallax-front full-width position-relative border-bottom-0">
+                <div class="js-parallax">
+                    <div class="js-layer" data-depth="0.18">
+                        <div class="lineup lineup--cleric"></div> 
+                    </div>
+                </div>
+                
                 <div class="row">
                     <div class="col-xl-6 col-md-12">
                         <h1 class="short-hr-left">THE GAME</h1>
                         <p>Outsmart your opponents and annihilate their towers in fast-paced 1v1 matches. Climb the ladder, win tournaments, unite your guild and earn awesome rewards in a competitive stage. It’s your time to shine!</p>
                     </div>
-                </div>
-            </div>
-
-            <div class="js-parallax">
-                <div class="js-layer" data-depth="0.18">
-                    <div class="lineup lineup--cleric"></div> 
                 </div>
             </div>
         </div>
