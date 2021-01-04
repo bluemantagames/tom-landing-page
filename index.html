@@ -523,6 +523,19 @@
         })
 
         $(window).scroll()
+
+        // GA subscribe event
+        var newsletterForm = document.querySelector('#mc-embedded-subscribe-form');
+        var newsletterSubscribeEvent = 'newsletter_subscribe';
+
+        newsletterForm.addEventListener('submit', () => {
+            var emailField = document.querySelector('#emailsign');
+            var email = emailField.value || undefined
+
+            gtag('event', newsletterSubscribeEvent, {
+                'email': email
+            });
+        })
     </script>
 
     <script type='text/javascript' src='https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
