@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ToM new card redirect</title>
+    <script>
+        const urls = ["https://form.jotform.com/210784378149364", "https://form.jotform.com/210783798901365"];
+
+        var index = window.localStorage.getItem("urlIndex");
+
+        if (index == null) {
+            index = Math.round(Math.random());
+
+            window.localStorage.setItem("urlIndex", index);
+        }
+
+        window.location.href = urls[index];
+    </script>
+  </head>
+  <body>
+      You're being redirected to the poll..
+  </body>
+</html>
+
